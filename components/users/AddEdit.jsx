@@ -15,7 +15,7 @@ function AddEdit(props) {
     const router = useRouter();
     const [showPassword, setShowPassword] = useState(false);
     
-    // form validation rules 
+    // formulário com regras de validação
     const validationSchema = Yup.object().shape({
         title: Yup.string()
             .required('Title is required'),
@@ -41,13 +41,13 @@ function AddEdit(props) {
     });
     const formOptions = { resolver: yupResolver(validationSchema) };
 
-    // set default form values if in edit mode
+    // definir valores de formulário padrão se estiver no modo de edição
     if (!isAddMode) {
         const { password, confirmPassword, ...defaultValues } = user;
         formOptions.defaultValues = defaultValues;
     }
 
-    // get functions to build form with useForm() hook
+    // obter funções para construir o formulário com o gancho useForm()
     const { register, handleSubmit, reset, formState } = useForm(formOptions);
     const { errors } = formState;
 

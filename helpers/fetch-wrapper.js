@@ -30,7 +30,7 @@ function put(url, body) {
     return fetch(url, requestOptions).then(handleResponse);
 }
 
-// prefixed with underscored because delete is a reserved word in javascript
+//prefixado com sublinhado porque delete é uma palavra reservada em javascript
 function _delete(url) {
     const requestOptions = {
         method: 'DELETE'
@@ -38,7 +38,7 @@ function _delete(url) {
     return fetch(url, requestOptions).then(handleResponse);
 }
 
-// helper functions
+// funções de ajuda
 
 function handleResponse(response) {
     return response.text().then(text => {

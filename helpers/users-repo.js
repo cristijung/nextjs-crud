@@ -21,18 +21,19 @@ function getById(id) {
 function create({ title, firstName, lastName, email, role, password }) {
     const user = { title, firstName, lastName, email, role, password };
 
-    // validate
+    // validação
     if (users.find(x => x.email === user.email))
         throw `User with the email ${user.email} already exists`;
 
-    // generate new user id
+    // gerando novo id para o user
     user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
 
-    // set date created and updated
+    //
+definir data criada e atualizada
     user.dateCreated = new Date().toISOString();
     user.dateUpdated = new Date().toISOString();
 
-    // add and save user
+    // add e salavar user
     users.push(user);
     saveData();
 }
@@ -41,32 +42,32 @@ function update(id, { title, firstName, lastName, email, role, password }) {
     const params = { title, firstName, lastName, email, role, password };
     const user = users.find(x => x.id.toString() === id.toString());
 
-    // validate
+    // validação
     if (params.email !== user.email && users.find(x => x.email === params.email))
         throw `User with the email ${params.email} already exists`;
 
-    // only update password if entered
+    //só atualizar a senha se digitada
     if (!params.password) {
         delete params.password;
     }
 
-    // set date updated
+    //definir data atualizada
     user.dateUpdated = new Date().toISOString();
 
-    // update and save
+    //atualizar e salvar
     Object.assign(user, params);
     saveData();
 }
 
-// prefixed with underscore '_' because 'delete' is a reserved word in javascript
+//prefixado com underline '_' porque 'delete' é uma palavra reservada em javascript
 function _delete(id) {
-    // filter out deleted user and save
+    //filtrar usuário excluído e salvar
     users = users.filter(x => x.id.toString() !== id.toString());
     saveData();
     
 }
 
-// private helper functions
+//funções auxiliares privadas
 
 function saveData() {
     fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
