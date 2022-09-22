@@ -1,5 +1,3 @@
-# next-js-10-crud-example
-
 ## CRUD - Next.js - React Hook Form
 _______________________________________
 
@@ -14,4 +12,4 @@ Neste tutorial foi utilizado, além do Next.Js:
 - Clone o repositório;
 - Use #npm ou #yarn para instalar as dependências
 
-Para documentação e vídeo de demosntração, acessar o post em inglês: https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form
+Para documentação e vídeo de demonstração, acessar o post em inglês: https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form
