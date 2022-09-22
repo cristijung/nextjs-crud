@@ -12,7 +12,6 @@ Neste tutorial foi utilizado, além do Next.Js:
 ## Configurações:
 - Crie uma pasta na sua máquina;
 - Clone o repositório;
-- Use ##npm ou ##yarn para instalar as dependências
+- Use #npm ou #yarn para instalar as dependências
 
-
-For documentation and live demo go to https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form
+Para documentação e vídeo de demosntração, acessar o post em inglês: https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form
