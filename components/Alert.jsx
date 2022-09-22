@@ -21,24 +21,24 @@ function Alert({ id, fade }) {
     const [alerts, setAlerts] = useState([]);
 
     useEffect(() => {
-        // subscribe to new alert notifications
+        // subscrever novas notificações de alerta
         const subscription = alertService.onAlert(id)
             .subscribe(alert => {
                 // clear alerts when an empty alert is received
                 if (!alert.message) {
                     setAlerts(alerts => {
-                        // filter out alerts without 'keepAfterRouteChange' flag
+                        // filtrar alertas sem o sinalizador 'keepAfterRouteChange'
                         const filteredAlerts = alerts.filter(x => x.keepAfterRouteChange);
 
-                        // remove 'keepAfterRouteChange' flag on the rest
+                        //remova o sinalizador 'keepAfterRouteChange' no resto
                         filteredAlerts.forEach(x => delete x.keepAfterRouteChange);
                         return filteredAlerts;
                     });
                 } else {
-                    // add alert to array
+                    // alerta do Array
                     setAlerts(alerts => ([...alerts, alert]));
 
-                    // auto close alert if required
+                    // alerta de fechamento automático, se necessário
                     if (alert.autoClose) {
                         setTimeout(() => removeAlert(alert), 3000);
                     }
@@ -46,13 +46,13 @@ function Alert({ id, fade }) {
             });
         
 
-        // clear alerts on location change
+        //alertas de remoção na mudança de local
         const onRouteChange = () => alertService.clear(id);
         router.events.on('routeChangeStart', onRouteChange);
 
-        // clean up function that runs when the component unmounts
+        //função de limpeza que é executada quando o componente é desmontado
         return () => {
-            // unsubscribe to avoid memory leaks
+            //cancelar a inscrição para evitar alteração na performance
             subscription.unsubscribe();
             router.events.off('routeChangeStart', onRouteChange);
         };
@@ -60,16 +60,16 @@ function Alert({ id, fade }) {
 
     function removeAlert(alert) {
         if (fade) {
-            // fade out alert
+            // alerta de fade
             const alertWithFade = { ...alert, fade: true };
             setAlerts(alerts => alerts.map(x => x === alert ? alertWithFade : x));
 
-            // remove alert after faded out
+            // Remover alerta de fade
             setTimeout(() => {
                 setAlerts(alerts => alerts.filter(x => x !== alertWithFade));
             }, 250);
         } else {
-            // remove alert
+            // remover o alerta
             setAlerts(alerts => alerts.filter(x => x !== alert));
         }
     }

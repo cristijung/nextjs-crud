@@ -21,12 +21,12 @@ export const AlertType = {
 const alertSubject = new Subject();
 const defaultId = 'default-alert';
 
-// enable subscribing to alerts observable
+// habilitar os alertas
 function onAlert(id = defaultId) {
     return alertSubject.asObservable().pipe(filter(x => x && x.id === id));
 }
 
-// convenience methods
+// métodos de convenção
 function success(message, options) {
     alert({ ...options, type: AlertType.Success, message });
 }
@@ -43,14 +43,14 @@ function warn(message, options) {
     alert({ ...options, type: AlertType.Warning, message });
 }
 
-// core alert method
+// método do alerta principal
 function alert(alert) {
     alert.id = alert.id || defaultId;
     alert.autoClose = (alert.autoClose === undefined ? true : alert.autoClose);
     alertSubject.next(alert);
 }
 
-// clear alerts
+// alerta de limpar
 function clear(id = defaultId) {
     alertSubject.next({ id });
 }

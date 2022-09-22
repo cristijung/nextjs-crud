@@ -5,9 +5,12 @@ export default Home;
 function Home() {
     return (
         <div>
-            <h1>Next.js 10 - CRUD Example with React Hook Form</h1>
-            <p>An example app showing how to list, add, edit and delete user records with Next.js 10 and the React Hook Form library.</p>
-            <p><Link href="/users">&gt;&gt; Manage Users</Link></p>
+            <h1>Next.js: CRUD + Hooks</h1>
+            <p>
+                Um App de exemplo mostrando como listar, adicionar, editar e excluir 
+                registros de usuário com Next.js 10 e a biblioteca React Hook Form.
+            </p>
+            <p><Link href="/users">&gt;&gt; Gerenciando usuários</Link></p>
         </div>
     );
 }

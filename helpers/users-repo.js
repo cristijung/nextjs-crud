@@ -28,8 +28,7 @@ function create({ title, firstName, lastName, email, role, password }) {
     // gerando novo id para o user
     user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
 
-    //
-definir data criada e atualizada
+    //definir data criada e atualizada
     user.dateCreated = new Date().toISOString();
     user.dateUpdated = new Date().toISOString();
 

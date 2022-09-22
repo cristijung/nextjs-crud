@@ -9,9 +9,9 @@ function App({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>Next.js 10 - CRUD Example with React Hook Form</title>
+                <title>Desenvolvendo um CRUD em Next.Js e Hooks</title>
 
-                {/* bootstrap css */}
+                {/* bootstrap - css */}
                 <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
             </Head>
 
@@ -23,13 +23,13 @@ function App({ Component, pageProps }) {
                 </div>
             </div>
 
-            {/* credits */}
+            {/* documentação do Next.Js e site do autor onde foi inspirado o tutorial */}
             <div className="text-center mt-4">
                 <p>
-                    <a href="https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form" target="_top">Next.js 10 - CRUD Example with React Hook Form</a>
+                    <a href="https://next-crud.js.org/" target="_top">Next.Js e ReactJs - Exemplo de CRUD</a>
                 </p>
                 <p>
-                    <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+                    <a href="https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form" target="_top">Adaptado e traduzido do artigo de JasonWatmore.com</a>
                 </p>
             </div>
         </>
