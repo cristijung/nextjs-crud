@@ -9,5 +9,27 @@
         "id": 1,
         "dateCreated": "2022-09-23T01:10:03.596Z",
         "dateUpdated": "2022-09-23T01:16:42.776Z"
+    },
+    {
+        "title": "Mrs",
+        "firstName": "Pedro",
+        "lastName": "Soares",
+        "email": "pedro.soares@teste.com",
+        "role": "User",
+        "password": "123456",
+        "id": 2,
+        "dateCreated": "2022-09-23T01:32:22.234Z",
+        "dateUpdated": "2022-09-23T01:32:22.234Z"
+    },
+    {
+        "title": "Miss",
+        "firstName": "Amanda",
+        "lastName": "Soares",
+        "email": "amanda.soares@teste.com",
+        "role": "Admin",
+        "password": "123456",
+        "id": 3,
+        "dateCreated": "2022-09-23T01:32:54.838Z",
+        "dateUpdated": "2022-09-23T01:32:54.838Z"
     }
 ]
