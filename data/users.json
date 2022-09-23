@@ -1,13 +1,13 @@
 [
     {
         "title": "Mr",
-        "firstName": "Ana",
-        "lastName": "Bastos",
-        "email": "teste@nada.com",
-        "role": "User",
-        "password": "123456789",
-        "id": 3,
-        "dateCreated": "2022-09-22T21:41:59.371Z",
-        "dateUpdated": "2022-09-22T21:41:59.371Z"
+        "firstName": "Marta",
+        "lastName": "Silva",
+        "email": "marta.silva@teste.com",
+        "role": "Admin",
+        "password": "123456",
+        "id": 1,
+        "dateCreated": "2022-09-23T01:10:03.596Z",
+        "dateUpdated": "2022-09-23T01:10:03.596Z"
     }
 ]

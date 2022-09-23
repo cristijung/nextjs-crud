@@ -24,14 +24,14 @@ function Index() {
 
     return (
         <div>
-            <h1>Users</h1>
-            <Link href="/users/add" className="btn btn-sm btn-success mb-2">Add User</Link>
+            <h1>Usuários</h1>
+            <Link href="/users/add" className="btn btn-sm btn-success mb-2">Adicionar usuário</Link>
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th style={{ width: '30%' }}>Name</th>
+                        <th style={{ width: '30%' }}>Nome</th>
                         <th style={{ width: '30%' }}>Email</th>
-                        <th style={{ width: '30%' }}>Role</th>
+                        <th style={{ width: '30%' }}>Função</th>
                         <th style={{ width: '10%' }}></th>
                     </tr>
                 </thead>
@@ -42,11 +42,11 @@ function Index() {
                             <td>{user.email}</td>
                             <td>{user.role}</td>
                             <td style={{ whiteSpace: 'nowrap' }}>
-                                <Link href={`/users/edit/${user.id}`} className="btn btn-sm btn-primary mr-1">Edit</Link>
+                                <Link href={`/users/edit/${user.id}`} className="btn btn-sm btn-primary mr-1">Editar</Link>
                                 <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger btn-delete-user" disabled={user.isDeleting}>
                                     {user.isDeleting 
                                         ? <span className="spinner-border spinner-border-sm"></span>
-                                        : <span>Delete</span>
+                                        : <span>Deletar</span>
                                     }
                                 </button>
                             </td>
@@ -62,7 +62,7 @@ function Index() {
                     {users && !users.length &&
                         <tr>
                             <td colSpan="4" className="text-center">
-                                <div className="p-2">No Users To Display</div>
+                                <div className="p-2">Não há usuários para exibir</div>
                             </td>
                         </tr>
                     }
